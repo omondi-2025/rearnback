@@ -92,6 +92,6 @@ def deposit():
 def callback():
     return "✅ Payment completed successfully! Pesapal will notify your system shortly."
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
+
